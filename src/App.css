@@ -1,22 +1,121 @@
-.App {
-  text-align: center;
+/* #root {
+  background-color: #fff;
+  background-size: 100% 1.2em;
+  background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                  -webkit-linear-gradient(#eee .05em, transparent .05em);
+  background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                  -moz-linear-gradient(#eee .05em, transparent .05em);
+  background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                  linear-gradient(#eee .05em, transparent .05em);
+  -pie-background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em,
+                 linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
+  behavior: url(/pie/PIE.htc);
+} */
+
+.outer-box {
+  border: 1px double lightgray;
+  width: 30%;
+  display: table;
 }
 
-.App-logo {
-  height: 40vmin;
+.inner-box {
+  width: 95%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#form {
+  padding-bottom: 25px;
 }
 
-.App-link {
-  color: #09d3ac;
+li {
+  list-style-type: none;}
+
+#app {
+  margin-left: 100px;
+}
+
+.input {
+  margin-right: 20px;
+}
+
+#add_button {
+  padding-left: 20px;
+}
+
+#add-button-appearance {
+  border-radius: 10% / 50%;  
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+}
+
+.remove_button {
+  padding-left: 20px;
+}
+
+.remove-button-appearance {
+  border-radius: 10% / 50%;  
+  background-color: darkred;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+}
+
+.add-button-wrapper .add-button-tooltiptext {
+  font-style: italic;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+.add-button-wrapper:hover .add-button-tooltiptext {
+  visibility: visible;
+  font-size: 8px;
+  padding: 4px;
+  position: absolute;
+  margin: -22px;
+  margin-top: -12px;
+}
+
+.wrapper .tooltiptext {
+  font-style: italic;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+.wrapper:hover .tooltiptext {
+  visibility: visible;
+  font-size: 8px;
+  margin-top: -10px;
+  margin-right: -25px;
+  float: right;
+}
+
+.checkbox-wrapper .checkbox-tooltiptext {
+  font-style: italic;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+.checkbox-wrapper:hover .checkbox-tooltiptext {
+  visibility: visible;
+  font-size: 8px;
+  padding: 4px;
+  position: absolute;
+  margin: -22px;
+  margin-top: -10px;
+}
+
+.todo {
+  margin-bottom: 20px;
+}
+
+.title-details-div {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.details-div {
+  padding-bottom: 14px;
 }
