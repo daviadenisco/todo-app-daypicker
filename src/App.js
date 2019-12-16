@@ -60,6 +60,9 @@ function App() {
 
   function addNewTodo(e) {
     const value = e.target.value;
+    if (e.target.title.length > 100) {
+      alert('Title is too long. Please enter 100 or fewer characters.')
+    }
 
     setValues({
       ...values,
@@ -69,17 +72,6 @@ function App() {
   }
 
   function toggleCheckbox(id) {
-    // don't do this, all it does is create a shallow copy
-    /*const updatedTodos = [...todos]
-    for (let i = 0; i < updatedTodos.length; i++) {
-      if (updatedTodos[i].id === id && !updatedTodos[i].completed) {
-        updatedTodos[i].completed = true;
-      } else {
-        updatedTodos[i].completed = false;
-      }
-    }*/
-
-    // instead, do this, which creates a new array that you can use to update state
     const updatedTodos = todos.map(todo =>{
       if (todo.id !== id){
         return todo;
@@ -89,7 +81,6 @@ function App() {
         completed: !todo.completed
       }
     })
-    console.log('updatedTodos: ', updatedTodos)
     setTodos(updatedTodos);
   }
 
@@ -109,7 +100,6 @@ function App() {
   }
 
   const handleFilterSelect = option => {
-    // console.log('option:', option)
     setSelectedFilter(option.value)
   }
 

@@ -10,7 +10,7 @@ function TodoForm({addNewTodo, values}) {
         <input type='text' className='input' placeholder='Add new todo' value={values.title} name='title' onChange={addNewTodo} />
       </div>
       <div>
-        <span className='title'> Due: </span>
+        <span className='title'>Due: </span>
         <input type='date' className='input' value={values.date} name='date' onChange={addNewTodo} />
       </div>
       <div>
