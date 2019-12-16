@@ -1,56 +1,21 @@
-import React, { useState } from 'react';
-import DayPickerComponent from './DayPickerComponent';
-import 'react-day-picker/lib/style.css';
+import React from 'react';
 import './App.css';
-
-import 'react-day-picker/lib/style.css';
   
-function TodoForm({addTodo}) {
-  const initialState = {
-    title: '',
-    due_date: '',
-    description: '',
-    completed: false
-  }
-
-  const [state, setState] = useState(initialState);
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    // if (state.title && state.due_date && state.description) {
-      addTodo(state.title, state.due_date, state.description)
-    // } else {
-    //   alert('A task must contain a title, description, and a due date. Please add the required information and then submit.')
-    // }
-    resetInput();
-  }
-
-  function handleChange(e) {
-    const value = e.target.value;
-    setState({
-      ...state,
-      [e.target.name]: value,
-    })
-  }
-
-  function resetInput () {
-    setState(initialState);
-  }
-
+function TodoForm({addNewTodo, values}) {
+  
   return (
-    <form id='form' onSubmit={handleSubmit}>
+    <div>
       <div>
         <span className='title'>Title: </span>
-        <input type='text' className='input' name='title' value={state.title} onChange={handleChange} />
+        <input type='text' className='input' placeholder='Add new todo' value={values.title} name='title' onChange={addNewTodo} />
       </div>
       <div>
-        <span className='title'> Due Date: </span>
-        {/* <input type='text' className='input' name='due_date' value={state.due_date} onChange={handleChange} /> */}
-        <DayPickerComponent selectedDay />
+        <span className='title'> Due: </span>
+        <input type='date' className='input' value={values.date} name='date' onChange={addNewTodo} />
       </div>
       <div>
         <span className='title'>Description: </span>
-        <input type='text' className='input' name='description' value={state.description} onChange={handleChange} />
+        <input type='text' className='input' value={values.description} name='description' onChange={addNewTodo} />
         
         <span id='add-button' className='add-button-wrapper'>
           <button id='add-button-appearance'>
@@ -59,7 +24,7 @@ function TodoForm({addTodo}) {
           <span className='add-button-tooltiptext'>add</span>
         </span>
       </div>
-    </form>
+    </div>
   )
 }
 

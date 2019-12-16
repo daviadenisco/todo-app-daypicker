@@ -14,7 +14,7 @@
 
 .outer-box {
   border: 1px double lightgray;
-  width: 30%;
+  width: 75%;
   display: table;
 }
 
@@ -111,6 +111,10 @@ li {
   margin-bottom: 20px;
 }
 
+.title-div {
+  padding-bottom: 10px;
+}
+
 .title-details-div {
   padding-left: 30px;
   padding-right: 30px;
@@ -118,4 +122,28 @@ li {
 
 .details-div {
   padding-bottom: 14px;
+}
+
+.completed {
+  background-color: darkgrey;
+  text-decoration-line: line-through;
+}
+
+.overdue {
+  background-color: rgb(228, 152, 152);
+}
+
+.dueTodayTomorrow {
+  background-color: rgb(219, 236, 184);
+}
+
+.notification {
+  font-weight: bold;
+}
+
+#filter {
+  width: 20%;
+  float: right;
+  margin-right: 24em;
+  margin-bottom: 36px;
 }
